@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="PersonalWebsite_shhedrington:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>PersonalWebsite_shhedrington</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="PersonalWebsite_shhedrington-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="PersonalWebsite_shhedrington:war exploded" />
+    </root>
+  </artifact>
+</component>
