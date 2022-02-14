@@ -17,7 +17,7 @@
 
         <div>${message}</div>
         <div class="wrapper">
-        <p>Welcome to the Color Changer<br><br>Use the navigation above to find the color changing webapp</p>
+        <p>Welcome to the Color Changer<br><br>Use the navigation to find the color changing webapp</p>
         </div>
 
         <footer>
