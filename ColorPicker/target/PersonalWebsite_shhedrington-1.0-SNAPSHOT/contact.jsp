@@ -18,8 +18,7 @@
 
 <nav>
     <a href="index.jsp">Home</a>&nbsp; &bull;
-    <a href="bio.jsp">Biography</a>&nbsp; &bull;
-    <a href="contact.jsp">Contact</a>
+    <a href="contact.jsp">Color Changer</a>
 </nav>
 
 <h2>Welcome to the Contact Page</h2>
@@ -40,7 +39,7 @@
                 <td><input type="text" name="greenValue" id="greenValue"></input></td>
             </tr>
             <tr>
-                <td><label for="blueValue">E-Mail Address:</label></td>
+                <td><label for="blueValue">Blue Value:</label></td>
                 <td><input type="text" name="blueValue" id="blueValue"></input></td>
             </tr>
         </table>
@@ -52,8 +51,7 @@
 
 <footer>
     <a href="index.jsp">Home</a>&nbsp; &bull;
-    <a href="bio.jsp">Biography</a>&nbsp; &bull;
-    <a href="contact.jsp">Contact</a>
+    <a href="contact.jsp">Color Changer</a>
 </footer>
 
 </body>

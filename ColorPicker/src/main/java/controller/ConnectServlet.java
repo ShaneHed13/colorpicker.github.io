@@ -32,18 +32,25 @@ public class ConnectServlet extends HttpServlet {
 
         //nullString.contains("2");
 
-        if(redValue != null && greenValue != null && blueValue != null) {
+        if(redValue != null && greenValue != null && blueValue != null && redValue < 256 && greenValue < 256 && blueValue < 256) {
 
             final RGB rgb = new RGB(redValue, greenValue, blueValue);
 
             //TODO put the user into a database
 
             request.setAttribute("rgb", rgb);
+            request.setAttribute("rho", rgb.getRohValue(redValue, greenValue, blueValue));
+            request.setAttribute("beta", rgb.getBetaValue(redValue, greenValue, blueValue));
+            request.setAttribute("gamma", rgb.getGammaValue(redValue, greenValue, blueValue));
+            request.setAttribute("luminosity", rgb.getLuminosity(redValue, greenValue, blueValue));
+            request.setAttribute("redFloat", (redValue.floatValue()/255));
+            request.setAttribute("greenFloat", (greenValue.floatValue()/255));
+            request.setAttribute("blueFloat", (blueValue.floatValue()/255));
 
         } else {
 
             target = "/index.jsp";
-            request.setAttribute("message", "Please fill out all form fields");
+            request.setAttribute("message", "Please fill out all form fields and only use integers between 0 - 255");
 
         }
         getServletContext().getRequestDispatcher(target).forward(request, response);

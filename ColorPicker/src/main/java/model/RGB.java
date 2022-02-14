@@ -7,20 +7,69 @@ public class RGB implements Serializable {
     private Integer redValue;
     private Integer greenValue;
     private Integer blueValue;
-    private Integer pThing;
-    private Integer vThing;
-    private Integer yThing;
+
 
     public RGB() {
     }
+
+
 
     public RGB(Integer redValue, Integer greenValue, Integer blueValue) {
         this.redValue = redValue;
         this.greenValue = greenValue;
         this.blueValue = blueValue;
-        this.pThing = 1/(this.redValue + this.greenValue + this.blueValue) * this.redValue;
-        this.vThing = 1/(this.redValue + this.greenValue + this.blueValue) * this.greenValue;
-        this.yThing = 1/(this.redValue + this.greenValue + this.blueValue) * this.blueValue;
+    }
+
+    public Float getLuminosity(Integer redValue, Integer greenValue, Integer blueValue) {
+
+        Float rv = redValue.floatValue();
+        Float bv = blueValue.floatValue();
+        Float gv = greenValue.floatValue();
+
+        Float rbHigh = Math.max(rv, bv);
+        Float bgHigh = Math.max(bv, gv);
+
+        Float high = Math.max(bgHigh, rbHigh);
+
+        Float luminosity = high/255;
+
+        return luminosity;
+
+    }
+    public Float getRohValue(Integer redValue, Integer greenValue, Integer blueValue) {
+
+        Float rv = redValue.floatValue();
+        Float bv = blueValue.floatValue();
+        Float gv = greenValue.floatValue();
+
+        Float rohValue = 1/(gv + bv + rv)*rv;
+
+        return rohValue;
+
+    }
+
+    public Float getGammaValue(Integer redValue, Integer greenValue, Integer blueValue) {
+
+        Float rv = redValue.floatValue();
+        Float bv = blueValue.floatValue();
+        Float gv = greenValue.floatValue();
+
+        Float gammaValue = 1/(gv + bv + rv)*gv;
+
+        return gammaValue;
+
+    }
+
+    public Float getBetaValue(Integer redValue, Integer greenValue, Integer blueValue) {
+
+        Float rv = redValue.floatValue();
+        Float bv = blueValue.floatValue();
+        Float gv = greenValue.floatValue();
+
+        Float betaValue = 1/(gv + bv + rv)*bv;
+
+        return betaValue;
+
     }
 
     public Integer getRedValue() {

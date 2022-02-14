@@ -16,34 +16,38 @@
 
 <nav>
     <a href="index.jsp">Home</a>&nbsp; &bull;
-    <a href="bio.jsp">Biography</a>&nbsp; &bull;
-    <a href="contact.jsp">Contact</a>
+    <a href="contact.jsp">Color Changer</a>
 </nav>
 
-<h2>Thank you for Submitting your Info!</h2>
+<h2>Thank you!</h2>
 <div></div>
 <div class="wrapper">
 
+    <h2 style="background-color:rgb(${rgb.redValue}, ${rgb.greenValue}, ${rgb.blueValue})">RGB Values</h2>
+
     <ul>
-        <li>Red Value: ${rgb.redValue}</li>
-        <li>Green Value: ${rgb.greenValue}</li>
-        <li>Blue Value: ${rgb.blueValue}</li>
+        <li>Red: ${redFloat}</li>
+        <li>Green: ${greenFloat}</li>
+        <li>Blue: ${blueFloat}</li>
 
     </ul>
 
+    <h2>Barycentric Color Tint Values</h2>
+
     <ul>
-        <li>V Value: ${1 / (rgb.redValue + rgb.greenValue + rgb.blueValue) * rgb.redValue}</li>
+        <li>rho: ${rho}</li>
+        <li>gamma: ${gamma}</li>
+        <li>beta: ${beta}</li>
+        <li>luminosity: ${luminosity}</li>
 
 
     </ul>
-    <p>Thanks ${rgb.redValue} ${rgb.greenValue} ${rgb.blueValue}for submitting your info.  Expect to hear back from me within the next 2 business days.  Until then, feel free to use the
-    navigation to explore more of the page!</p>
+
 </div>
 
 <footer>
     <a href="index.jsp">Home</a>&nbsp; &bull;
-    <a href="bio.jsp">Biography</a>&nbsp; &bull;
-    <a href="contact.jsp">Contact</a>
+    <a href="contact.jsp">Color Changer</a>
 </footer>
 </body>
 </html>
